@@ -1,7 +1,7 @@
 import dotenv from "dotenv"
 import express from "express"
 import cors from "cors"
-import githubHandler from "./clients/githubWebhook"
+import githubHandler from "./routes/githubWebhook"
 
 dotenv.config()
 
