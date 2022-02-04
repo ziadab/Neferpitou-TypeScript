@@ -1,10 +1,6 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSdk = exports.GetCurrenciesDocument = exports.SubProductGroup = exports.SlotSortOption = exports.PeopleSortOption = exports.PartnerTypes = exports.PageSortOption = exports.OpportunitySortOption = exports.OfficeSortOption = exports.MemberLeadSortOption = exports.GoalType = exports.FileImportType = exports.ExchangeType = exports.EmployeeLeadSortOption = exports.ConstantSortOption = exports.CompanySortOption = exports.CitySortOption = exports.BranchEmployeeStatus = exports.BaseSortDirection = exports.ApplicationSortOption = exports.AlignmentTypes = void 0;
-const graphql_tag_1 = __importDefault(require("graphql-tag"));
+exports.getSdk = exports.SubProductGroup = exports.SlotSortOption = exports.PeopleSortOption = exports.PartnerTypes = exports.PageSortOption = exports.OpportunitySortOption = exports.OfficeSortOption = exports.MemberLeadSortOption = exports.GoalType = exports.FileImportType = exports.ExchangeType = exports.EmployeeLeadSortOption = exports.ConstantSortOption = exports.CompanySortOption = exports.CitySortOption = exports.BranchEmployeeStatus = exports.BaseSortDirection = exports.ApplicationSortOption = exports.AlignmentTypes = void 0;
 var AlignmentTypes;
 (function (AlignmentTypes) {
     AlignmentTypes["Exchange"] = "exchange";
@@ -241,22 +237,8 @@ var SubProductGroup;
     SubProductGroup["BusinessAdministrationBusinessDevelopmentFinanceMarketing"] = "business_administration_business_development_finance_marketing";
     SubProductGroup["InformationTechnologyEngineering"] = "information_technology_engineering";
 })(SubProductGroup = exports.SubProductGroup || (exports.SubProductGroup = {}));
-exports.GetCurrenciesDocument = (0, graphql_tag_1.default) `
-    query getCurrencies {
-  allCurrencies {
-    alphabetic_code
-    id
-    minor_unit
-    name
-  }
-}
-    `;
 const defaultWrapper = (action, _operationName) => action();
 function getSdk(client, withWrapper = defaultWrapper) {
-    return {
-        getCurrencies(variables, requestHeaders) {
-            return withWrapper((wrappedRequestHeaders) => client.request(exports.GetCurrenciesDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'getCurrencies');
-        }
-    };
+    return {};
 }
 exports.getSdk = getSdk;
