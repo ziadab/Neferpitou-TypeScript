@@ -1,0 +1,91 @@
+query getOpportunities($id: ID) {
+  getOpportunity(id: $id) {
+    company_description
+    study_levels {
+      alias_name
+      name
+      option
+      short_name
+    }
+    skills {
+      constant_name
+      option
+      id
+    }
+    remote_opportunity
+    programmes {
+      short_name
+      short_name_display
+    }
+    programme {
+      short_name
+      short_name_display
+    }
+    profile_photo
+    opportunity_cost(mc_id: 1552)
+    host_lc {
+      country
+      country_code
+    }
+    home_mc {
+      country
+      country_code
+    }
+    home_lc {
+      country_code
+      country
+    }
+    duration
+    description
+    date_opened
+    created_at
+    applicants_count
+    backgrounds {
+      id
+      level
+      constant_name
+    }
+    specifics_info {
+      computer
+      expected_work_schedule
+      salary_periodicity
+      salary_currency {
+        name
+        numeric_code
+        alphabetic_code
+      }
+      salary
+    }
+    languages {
+      id
+      option
+      constant_name
+    }
+    logistics_info {
+      food_provided
+      food_covered
+      computer_provided
+      accommodation_provided
+      accommodation_covered
+      transportation_covered
+      transportation_provided
+    }
+    work_hours
+    available_slots {
+      available_openings
+      end_date
+      openings
+      start_date
+      status
+      title
+    }
+    title
+    sdg_info {
+      sdg_target {
+        goal_index
+      }
+    }
+    cover_photo(cdn_links: false)
+    id
+  }
+}

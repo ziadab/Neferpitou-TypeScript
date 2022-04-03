@@ -8,16 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const telegram_1 = __importDefault(require("../services/telegram"));
 const router = (0, express_1.Router)();
 router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const text = req.body["text"];
-    yield telegram_1.default.sendMarkdownMsg(text, parseInt(process.env.ZIAD_CHAT_ID));
-    return res.end("ok");
+    console.log(req.body);
+    res.status(200).send("ok");
 }));
 exports.default = router;

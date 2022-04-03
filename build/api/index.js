@@ -1,6 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SubProductGroup = exports.SlotSortOption = exports.PeopleSortOption = exports.PartnerTypes = exports.PageSortOption = exports.OpportunitySortOption = exports.OfficeSortOption = exports.MemberLeadSortOption = exports.GoalType = exports.FileImportType = exports.ExchangeType = exports.EmployeeLeadSortOption = exports.ConstantSortOption = exports.CompanySortOption = exports.CitySortOption = exports.BranchEmployeeStatus = exports.BaseSortDirection = exports.ApplicationSortOption = exports.AlignmentTypes = void 0;
+exports.getSdk = exports.GetPeopleDocument = exports.GetOpportunitiesDocument = exports.GetActiveApplicationDocument = exports.SubProductGroup = exports.SlotSortOption = exports.PeopleSortOption = exports.PartnerTypes = exports.PageSortOption = exports.OpportunitySortOption = exports.OfficeSortOption = exports.MemberLeadSortOption = exports.GoalType = exports.FileImportType = exports.ExchangeType = exports.EmployeeLeadSortOption = exports.ConstantSortOption = exports.CompanySortOption = exports.CitySortOption = exports.BranchEmployeeStatus = exports.BaseSortDirection = exports.ApplicationSortOption = exports.AlignmentTypes = void 0;
+const graphql_tag_1 = __importDefault(require("graphql-tag"));
 var AlignmentTypes;
 (function (AlignmentTypes) {
     AlignmentTypes["Exchange"] = "exchange";
@@ -237,3 +241,158 @@ var SubProductGroup;
     SubProductGroup["BusinessAdministrationBusinessDevelopmentFinanceMarketing"] = "business_administration_business_development_finance_marketing";
     SubProductGroup["InformationTechnologyEngineering"] = "information_technology_engineering";
 })(SubProductGroup = exports.SubProductGroup || (exports.SubProductGroup = {}));
+exports.GetActiveApplicationDocument = (0, graphql_tag_1.default) `
+    query GetActiveApplication($id: ID!) {
+  personApplications(
+    id: $id
+    filters: {statuses: ["approved", "open", "accepted", "matched", "approved_tn_manager", "approved_ep_manager"]}
+  ) {
+    data {
+      id
+      status
+      opportunity {
+        id
+        title
+        programme {
+          short_name
+        }
+      }
+    }
+  }
+}
+    `;
+exports.GetOpportunitiesDocument = (0, graphql_tag_1.default) `
+    query getOpportunities($id: ID) {
+  getOpportunity(id: $id) {
+    company_description
+    study_levels {
+      alias_name
+      name
+      option
+      short_name
+    }
+    skills {
+      constant_name
+      option
+      id
+    }
+    remote_opportunity
+    programmes {
+      short_name
+      short_name_display
+    }
+    programme {
+      short_name
+      short_name_display
+    }
+    profile_photo
+    opportunity_cost(mc_id: 1552)
+    host_lc {
+      country
+      country_code
+    }
+    home_mc {
+      country
+      country_code
+    }
+    home_lc {
+      country_code
+      country
+    }
+    duration
+    description
+    date_opened
+    created_at
+    applicants_count
+    backgrounds {
+      id
+      level
+      constant_name
+    }
+    specifics_info {
+      computer
+      expected_work_schedule
+      salary_periodicity
+      salary_currency {
+        name
+        numeric_code
+        alphabetic_code
+      }
+      salary
+    }
+    languages {
+      id
+      option
+      constant_name
+    }
+    logistics_info {
+      food_provided
+      food_covered
+      computer_provided
+      accommodation_provided
+      accommodation_covered
+      transportation_covered
+      transportation_provided
+    }
+    work_hours
+    available_slots {
+      available_openings
+      end_date
+      openings
+      start_date
+      status
+      title
+    }
+    title
+    sdg_info {
+      sdg_target {
+        goal_index
+      }
+    }
+    cover_photo(cdn_links: false)
+    id
+  }
+}
+    `;
+exports.GetPeopleDocument = (0, graphql_tag_1.default) `
+    query getPeople($from: DateTime, $to: DateTime) {
+  people(
+    q: ""
+    page: 1
+    per_page: 200
+    filters: {registered: {from: $from, to: $to}, home_committee: 2359}
+  ) {
+    data {
+      id
+      status
+      first_name
+      last_name
+      gender
+      referral_type
+      email
+      person_profile {
+        selected_programmes
+      }
+      contact_detail {
+        phone
+        facebook
+      }
+    }
+  }
+}
+    `;
+const defaultWrapper = (action, _operationName, _operationType) => action();
+function getSdk(client, withWrapper = defaultWrapper) {
+    return {
+        GetActiveApplication(variables, requestHeaders) {
+            return withWrapper((wrappedRequestHeaders) => client.request(exports.GetActiveApplicationDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'GetActiveApplication', 'query');
+        },
+        getOpportunities(variables, requestHeaders) {
+            return withWrapper((wrappedRequestHeaders) => client.request(exports.GetOpportunitiesDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'getOpportunities', 'query');
+        },
+        getPeople(variables, requestHeaders) {
+            return withWrapper((wrappedRequestHeaders) => client.request(exports.GetPeopleDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'getPeople', 'query');
+        }
+    };
+}
+exports.getSdk = getSdk;
