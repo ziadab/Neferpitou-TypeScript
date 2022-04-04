@@ -13,36 +13,37 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const google_spreadsheet_1 = require("google-spreadsheet");
+// import { GoogleSpreadsheet } from "google-spreadsheet"
 const dayjs_1 = __importDefault(require("dayjs"));
 const GraphQlClient_1 = __importDefault(require("../clients/GraphQlClient"));
+const hubspot_1 = __importDefault(require("../api/hubspot"));
+const axios_1 = __importDefault(require("axios"));
+const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`;
 const router = (0, express_1.Router)();
-const doc = new google_spreadsheet_1.GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID);
+// const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID)
+// router.post("/", async (req, res) => {
+//   const to = dayjs().format("YYYY-MM-DD HH:mm:ss")
+//   const from = dayjs().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss")
+//   const data = await client.getPeople({ from, to })
+//   if (data.people?.data == null) {
+//   }
+// })
 router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     const to = (0, dayjs_1.default)().format("YYYY-MM-DD HH:mm:ss");
     const from = (0, dayjs_1.default)().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss");
-    const data = yield GraphQlClient_1.default.getPeople({ from, to });
-    if (((_a = data.people) === null || _a === void 0 ? void 0 : _a.data) == null) {
-    }
-}));
-router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // const data = await hubspotClient.crm.contacts.getAll()
-    var _b, _c;
-    // res.status(200).json(data)
-    const to = (0, dayjs_1.default)().format("YYYY-MM-DD HH:mm:ss");
-    const from = (0, dayjs_1.default)().subtract(5, "day").format("YYYY-MM-DD HH:mm:ss");
     const data = yield GraphQlClient_1.default.getPeople({ to, from });
-    (_c = (_b = data.people) === null || _b === void 0 ? void 0 : _b.data) === null || _c === void 0 ? void 0 : _c.map((el) => __awaiter(void 0, void 0, void 0, function* () {
-        var _d;
-        const contact = {
-            properties: {
-                email: el === null || el === void 0 ? void 0 : el.email,
-                firstname: el === null || el === void 0 ? void 0 : el.first_name,
-                lastname: el === null || el === void 0 ? void 0 : el.last_name,
-                phone: (_d = el === null || el === void 0 ? void 0 : el.contact_detail) === null || _d === void 0 ? void 0 : _d.phone,
-            },
-        };
-    }));
+    const { success, error } = yield (0, hubspot_1.default)(data);
+    if (error.length > 0) {
+        yield axios_1.default.post(sendMsg, {
+            chat_id: -798569661,
+            text: `The following users already exist in hubspot ${error.toString()}`,
+        });
+        return res.send("Ok");
+    }
+    yield axios_1.default.post(sendMsg, {
+        chat_id: -798569661,
+        text: `${success.length} added to HubSpot`,
+    });
+    res.status(200).send("Ok");
 }));
 exports.default = router;
