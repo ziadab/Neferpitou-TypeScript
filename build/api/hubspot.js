@@ -46,11 +46,11 @@ exports.default = (data) => __awaiter(void 0, void 0, void 0, function* () {
         yield HubSpotClient_1.default.crm.contacts.basicApi
             .create(contact)
             .then((res) => {
-            console.log("success: ", el === null || el === void 0 ? void 0 : el.id);
+            // console.log("success: ", el?.id)
             success.push(el === null || el === void 0 ? void 0 : el.id);
         })
             .catch((err) => {
-            console.log("fail: ", el === null || el === void 0 ? void 0 : el.id);
+            // console.log("fail: ", el?.id)
             error.push(el === null || el === void 0 ? void 0 : el.id);
         })
             .finally(() => {
