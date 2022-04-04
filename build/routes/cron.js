@@ -19,6 +19,7 @@ const GraphQlClient_1 = __importDefault(require("../clients/GraphQlClient"));
 const hubspot_1 = __importDefault(require("../api/hubspot"));
 const axios_1 = __importDefault(require("axios"));
 const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`;
+// console.log(sendMsg)
 const router = (0, express_1.Router)();
 // const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID)
 // router.post("/", async (req, res) => {
@@ -29,9 +30,17 @@ const router = (0, express_1.Router)();
 //   }
 // })
 router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a, _b;
     const to = (0, dayjs_1.default)().format("YYYY-MM-DD HH:mm:ss");
-    const from = (0, dayjs_1.default)().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss");
+    const from = (0, dayjs_1.default)().subtract(30, "day").format("YYYY-MM-DD HH:mm:ss");
     const data = yield GraphQlClient_1.default.getPeople({ to, from });
+    if (((_b = (_a = data.people) === null || _a === void 0 ? void 0 : _a.data) === null || _b === void 0 ? void 0 : _b.length) == 0) {
+        yield axios_1.default.post(sendMsg, {
+            chat_id: -798569661,
+            text: `No ep's on hubspot hihihi`,
+        });
+        return res.send("Ok");
+    }
     const { success, error } = yield (0, hubspot_1.default)(data);
     if (error.length > 0) {
         yield axios_1.default.post(sendMsg, {

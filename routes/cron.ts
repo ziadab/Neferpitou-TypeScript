@@ -6,6 +6,7 @@ import hubspot from "../api/hubspot"
 import axios from "axios"
 
 const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`
+// console.log(sendMsg)
 const router = Router()
 // const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID)
 
@@ -20,9 +21,18 @@ const router = Router()
 
 router.post("/", async (req, res) => {
   const to = dayjs().format("YYYY-MM-DD HH:mm:ss")
-  const from = dayjs().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss")
+  const from = dayjs().subtract(30, "day").format("YYYY-MM-DD HH:mm:ss")
 
   const data = await client.getPeople({ to, from })
+
+  if (data.people?.data?.length == 0) {
+    await axios.post(sendMsg, {
+      chat_id: -798569661,
+      text: `No ep's on hubspot hihihi`,
+    })
+    return res.send("Ok")
+  }
+
   const { success, error } = await hubspot(data)
   if (error.length > 0) {
     await axios.post(sendMsg, {
