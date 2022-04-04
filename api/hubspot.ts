@@ -43,11 +43,11 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
     await hubspotClient.crm.contacts.basicApi
       .create(contact)
       .then((res) => {
-        console.log("success: ", el?.id)
+        // console.log("success: ", el?.id)
         success.push(el?.id!)
       })
       .catch((err) => {
-        console.log("fail: ", el?.id)
+        // console.log("fail: ", el?.id)
         error.push(el?.id!)
       })
       .finally(() => {
