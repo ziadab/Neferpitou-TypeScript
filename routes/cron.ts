@@ -21,7 +21,7 @@ const router = Router()
 
 router.post("/", async (req, res) => {
   const to = dayjs().format("YYYY-MM-DD HH:mm:ss")
-  const from = dayjs().subtract(30, "day").format("YYYY-MM-DD HH:mm:ss")
+  const from = dayjs().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss")
 
   const data = await client.getPeople({ to, from })
 
