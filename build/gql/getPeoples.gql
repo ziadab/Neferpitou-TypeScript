@@ -1,0 +1,29 @@
+# Looks like you do not have any tables.
+# Click on the "Data" tab on top to create tables
+# Try out GraphQL queries here after you create tables
+query getPeople($from: DateTime, $to: DateTime) {
+  # query getPeople {
+  people(
+    q: ""
+    page: 1
+    per_page: 200
+    filters: { registered: { from: $from, to: $to }, home_committee: 2359 }
+  ) {
+    data {
+      id
+      status
+      first_name
+      last_name
+      gender
+      referral_type
+      email
+      person_profile {
+        selected_programmes
+      }
+      contact_detail {
+        phone
+        facebook
+      }
+    }
+  }
+}
