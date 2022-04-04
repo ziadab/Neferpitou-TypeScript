@@ -17,6 +17,7 @@ query getPeople($from: DateTime, $to: DateTime) {
       gender
       referral_type
       email
+      created_at
       person_profile {
         selected_programmes
       }

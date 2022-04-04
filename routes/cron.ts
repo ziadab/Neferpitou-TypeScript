@@ -4,6 +4,7 @@ import dayjs from "dayjs"
 import client from "../clients/GraphQlClient"
 import hubspot from "../api/hubspot"
 import axios from "axios"
+import hubspotClient from "../clients/HubSpotClient"
 
 const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`
 // console.log(sendMsg)

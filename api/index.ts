@@ -15254,7 +15254,7 @@ export type GetPeopleQueryVariables = Exact<{
 }>;
 
 
-export type GetPeopleQuery = { __typename?: 'QueryType', people?: { __typename?: 'PersonList', data?: Array<{ __typename?: 'Person', id: string, status?: string | null, first_name?: string | null, last_name?: string | null, gender?: string | null, referral_type?: string | null, email?: string | null, person_profile?: { __typename?: 'PersonProfile', selected_programmes?: Array<number | null> | null } | null, contact_detail?: { __typename?: 'ContactInfo', phone?: string | null, facebook?: string | null } | null } | null> | null } | null };
+export type GetPeopleQuery = { __typename?: 'QueryType', people?: { __typename?: 'PersonList', data?: Array<{ __typename?: 'Person', id: string, status?: string | null, first_name?: string | null, last_name?: string | null, gender?: string | null, referral_type?: string | null, email?: string | null, created_at?: any | null, person_profile?: { __typename?: 'PersonProfile', selected_programmes?: Array<number | null> | null } | null, contact_detail?: { __typename?: 'ContactInfo', phone?: string | null, facebook?: string | null } | null } | null> | null } | null };
 
 
 export const GetActiveApplicationDocument = gql`
@@ -15386,6 +15386,7 @@ export const GetPeopleDocument = gql`
       gender
       referral_type
       email
+      created_at
       person_profile {
         selected_programmes
       }

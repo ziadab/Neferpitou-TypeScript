@@ -370,6 +370,7 @@ exports.GetPeopleDocument = (0, graphql_tag_1.default) `
       gender
       referral_type
       email
+      created_at
       person_profile {
         selected_programmes
       }
