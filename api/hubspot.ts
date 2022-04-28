@@ -50,7 +50,7 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
         expa_referrer: el?.referral_type!,
         hs_lead_status: "NOT_CONTACTED",
         program_interested_in: program_interested_in!,
-        lifecyclestage: "Intersted",
+        lifecyclestage: "intersted",
         expa_created_date,
         hubspot_owner_id,
         phone,
