@@ -15,7 +15,7 @@ interface HubspotResult {
 export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
   const error: string[] = []
   const success: string[] = []
-  data.people?.data?.map(async (el) => {
+  data.people?.data?.map(async (el, index) => {
     const phone =
       el?.contact_detail?.phone! == null
         ? ""
@@ -29,7 +29,9 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
         : el?.person_profile?.selected_programmes![0]?.toString()
     const hubspot_owner_id =
       program_interested_in == "0"
-        ? "296102844"
+        ? index % 2 == 0
+          ? "273765855"
+          : "296102633"
         : (product_to_manager as any)[program_interested_in!]
     const expa_created_date = dayjs(el?.created_at)
       .utc()
@@ -38,13 +40,6 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
       .hour(0)
       .valueOf()
       .toString()
-    // const  =
-    // const expa_created_date = `${date.valueOf()} (${date.format(
-    //   "DD MMM YYYY"
-    // )} 00:00:00 UTC)`
-
-    // console.log(expa_created_date)
-    // await new Promise((f) => setTimeout(f, 3000))
 
     const contact = {
       properties: {
@@ -55,6 +50,7 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
         expa_referrer: el?.referral_type!,
         hs_lead_status: "NOT_CONTACTED",
         program_interested_in: program_interested_in!,
+        lifecyclestage: "Intersted",
         expa_created_date,
         hubspot_owner_id,
         phone,
