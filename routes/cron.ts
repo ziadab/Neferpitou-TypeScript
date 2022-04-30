@@ -9,10 +9,11 @@ const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`
 const router = Router()
 
 router.get("/", async (req, res) => {
-  const to = dayjs().format("YYYY-MM-DD HH:mm:ss")
-  const from = dayjs().subtract(1, "day").format("YYYY-MM-DD HH:mm:ss")
+  const to = dayjs().format("YYYY-MM-DD")
+  const from = dayjs().subtract(1, "day").format("YYYY-MM-DD")
+  const token: string = (req.query as any).token!
 
-  const data = await Client((req.query as any).token!).getPeople({ to, from })
+  const data = await Client(token).getPeople({ to, from })
 
   if (data.people?.data?.length == 0) {
     await axios.post(sendMsg, {
