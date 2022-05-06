@@ -5,6 +5,7 @@ import githubHandler from "./routes/githubWebhook"
 import hubspotHundler from "./routes/hubspot"
 import telegramHandler from "./routes/telegram"
 import cronHandler from "./routes/cron"
+import typeformHandler from "./routes/typeform"
 
 dotenv.config()
 
@@ -15,6 +16,7 @@ app.use("/github", githubHandler)
 app.use("/hubspot", hubspotHundler)
 app.use("/telegram", telegramHandler)
 app.use("/cron", cronHandler)
+app.use("/typeform", typeformHandler)
 
 const port = process.env.PORT || 5000
 app.listen(port, () => {

@@ -14,6 +14,18 @@ class TelegramService {
         console.log(err.response.data)
       })
   }
+
+  static async sendHTMLMsg(text: string, chat_id: number) {
+    return await axios
+      .post(this.sendMsgUrl, {
+        chat_id,
+        text,
+        parse_mode: "HTML",
+      })
+      .catch((err) => {
+        console.log(err.response.data)
+      })
+  }
 }
 
 export default TelegramService
