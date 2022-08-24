@@ -1,0 +1,8 @@
+mutation UpdatePersonMutation($id: ID!, $person: PersonInput) {
+  updatePerson(id: $id, person: $person) {
+    expa_settings {
+      email_notifications
+      __typename
+    }
+  }
+}

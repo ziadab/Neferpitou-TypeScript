@@ -4,6 +4,7 @@ import { GetPeopleQuery } from ".";
 import hubspotClient from "../clients/HubSpotClient";
 import product_to_manager from "../utils/product_to_manager";
 import utc from "dayjs/plugin/utc";
+import Client from "../clients/GraphQlClient";
 
 dayjs.extend(utc);
 
@@ -15,6 +16,7 @@ interface HubspotResult {
 export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
   const error: string[] = [];
   const success: string[] = [];
+  const client = Client("");
   data.people?.data?.map(async (el, index) => {
     const phone =
       el?.contact_detail?.phone! == null
@@ -56,6 +58,10 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
         phone,
       },
     };
+    await client.UpdatePersonMutation({
+      id: el?.id!,
+      person: { manager_ids: [4234147, 3159696, 4565034] },
+    });
     // console.log(el?.id)
     await hubspotClient.crm.contacts.basicApi
       .create(contact)
