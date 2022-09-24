@@ -10,7 +10,7 @@ import { getSdk } from "../api"
 // const client = getSdk(graphQlClient)
 
 export default (token: string) => {
-  const graphQlClient = new GraphQLClient(process.env.AIESEC_ENDPOINT!, {
+  const graphQlClient = new GraphQLClient("https://gis-api.aiesec.org/graphql", {
     headers: {
       Authorization: token || process.env.AIESEC_TOKEN!,
     },
