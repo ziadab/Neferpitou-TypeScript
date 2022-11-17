@@ -1,8 +1,7 @@
-import * as hubspot from "@hubspot/api-client"
+import * as hubspot from "@hubspot/api-client";
 
 const hubspotClient = new hubspot.Client({
-  apiKey: process.env.HUBSPOT_API_KEY,
-  developerApiKey: process.env.HUBSPOT_DEV_KEY,
-})
+  accessToken: process.env.HUBSPOT_TOKEN,
+});
 
-export default hubspotClient
+export default hubspotClient;

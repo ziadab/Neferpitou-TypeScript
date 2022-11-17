@@ -71,7 +71,7 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
       })
       .catch((err) => {
         // console.log("fail: ", el?.id)
-        console.log(err);
+        // console.log(err);
         // console.log(el?.id!)
         error.push(el?.id!);
       })
