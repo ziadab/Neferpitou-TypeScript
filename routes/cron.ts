@@ -10,12 +10,13 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   const to = dayjs().format("YYYY-MM-DD HH:mm:ss");
-  const from = dayjs().subtract(5, "hours").format("YYYY-MM-DD HH:mm:ss");
+  const from = dayjs().subtract(3, "day").format("YYYY-MM-DD HH:mm:ss");
+
   console.log({ to, from });
   const token: string = (req.query as any).token!;
 
   const data = await Client(token).getPeople({ to, from });
-  console.log(data);
+  console.log(data.people?.data);
 
   if (data.people?.data?.length == 0) {
     await axios.post(sendMsg, {

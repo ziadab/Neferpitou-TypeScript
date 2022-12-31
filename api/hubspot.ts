@@ -32,8 +32,8 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
     const hubspot_owner_id =
       program_interested_in == "0"
         ? Math.random() < 0.5
-          ? "273765855"
-          : "296102633"
+          ? "443237828"
+          : "301665990"
         : (product_to_manager as any)[program_interested_in!];
     const expa_created_date = dayjs(el?.created_at)
       .utc()
@@ -60,7 +60,7 @@ export default async (data: GetPeopleQuery): Promise<HubspotResult> => {
     };
     await client.UpdatePersonMutation({
       id: el?.id!,
-      person: { manager_ids: [4234147, 3159696, 4565034] },
+      person: { manager_ids: [4760474, 4952439, 4967151] },
     });
     // console.log(el?.id)
     await hubspotClient.crm.contacts.basicApi
