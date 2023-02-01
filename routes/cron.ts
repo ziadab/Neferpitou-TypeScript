@@ -9,8 +9,13 @@ const sendMsg = `${process.env.TELEGRAM_LINK}/sendMessage`;
 const router = Router();
 
 router.get("/", async (req, res) => {
+  const days = req.query["days"]?.toString() || 3;
+  console.log(days);
   const to = dayjs().format("YYYY-MM-DD HH:mm:ss");
-  const from = dayjs().subtract(3, "day").format("YYYY-MM-DD HH:mm:ss");
+  const from = dayjs()
+    //@ts-ignore
+    .subtract(parseInt(days), "day")
+    .format("YYYY-MM-DD HH:mm:ss");
 
   console.log({ to, from });
   const token: string = (req.query as any).token!;
@@ -30,7 +35,7 @@ router.get("/", async (req, res) => {
   if (error.length > 0) {
     await axios.post(sendMsg, {
       chat_id: parseInt(<string>process.env.ZIAD_CHAT_ID),
-      text: `The following users already exist in hubspot ${error.toString()}`,
+      text: `The following users already exist in hubspot ${error.toString()}\n\n Success: ${success.toString()}`,
     });
     return res.send("Ok");
   }
