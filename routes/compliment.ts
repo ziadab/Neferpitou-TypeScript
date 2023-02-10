@@ -3,7 +3,7 @@ import TelegramService from "../services/telegram";
 import getCompliment from "../utils/getCompliment";
 const router = Router();
 
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   const users = [
     { chat_id: 513915705, name: "Ziad" },
     { chat_id: 1058010537, name: "Hanae" },
