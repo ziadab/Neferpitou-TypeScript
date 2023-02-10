@@ -34,6 +34,7 @@
     "helmet": "^5.0.2",
     "libphonenumber-js": "^1.9.50",
     "lodash.pick": "^4.4.0",
+    "node-spotify-api": "^1.1.1",
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.4"

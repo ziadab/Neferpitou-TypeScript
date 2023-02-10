@@ -6,6 +6,7 @@ import hubspotHundler from "./routes/hubspot";
 import telegramHandler from "./routes/telegram";
 import cronHandler from "./routes/cron";
 import typeformHandler from "./routes/typeform";
+import complimentHandler from "./routes/compliment";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use("/hubspot", hubspotHundler);
 app.use("/telegram", telegramHandler);
 app.use("/cron", cronHandler);
 app.use("/typeform", typeformHandler);
+app.use("/compliment", complimentHandler);
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
