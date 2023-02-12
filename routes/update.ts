@@ -63,7 +63,7 @@ router.get("/", async (req: Request<{}, {}, {}, UpdateQuery>, res) => {
     await newSheet.addRows(data);
 
     TelegramService.sendMessage(
-      `Update has been used by the following token: ${token}\n\nAdded: ${data.length} ep`,
+      `Update has been used by the following token: ${token}\nFrom: ${from}\nTo:${to}\nAdded: ${data.length} ep`,
       parseInt(process.env.ZIAD_CHAT_ID!)
     );
 
