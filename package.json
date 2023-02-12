@@ -9,7 +9,7 @@
     "start:prod": "node ./build/app.js",
     "build": "tsc",
     "postinstall": "yarn build",
-    "generate": "graphql-codegen -r dotenv/config --config codegen.yml --watch"
+    "generate": "graphql-codegen -r dotenv/config --config codegen.yml"
   },
   "keywords": [],
   "author": "",
