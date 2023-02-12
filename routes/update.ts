@@ -70,6 +70,12 @@ router.get("/", async (req: Request<{}, {}, {}, UpdateQuery>, res) => {
     return res.status(200).end(`Added: ${data.length} ep`);
   } catch (e) {
     //@ts-ignore
+    TelegramService.sendMessage(
+      //@ts-ignore
+      `Error happen while update with the following parameters:\nFrom: ${from}\nTo:${to}\nToken: ${token}\nError: ${e.message}`,
+      parseInt(process.env.ZIAD_CHAT_ID!)
+    );
+    //@ts-ignore
     return res.status(401).end(e.message);
   }
 });
