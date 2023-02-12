@@ -2,6 +2,7 @@ import { Router, Request } from "express";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import Client from "../clients/GraphQlClient";
 import creds from "../client_secret.json";
+import TelegramService from "../services/telegram";
 
 const programMap = {
   7: "GV",
@@ -60,6 +61,11 @@ router.get("/", async (req: Request<{}, {}, {}, UpdateQuery>, res) => {
 
     //@ts-ignore
     await newSheet.addRows(data);
+
+    TelegramService.sendMessage(
+      `Update has been used by the following token: ${token}\n\nAdded: ${data.length} ep`,
+      parseInt(process.env.ZIAD_CHAT_ID!)
+    );
 
     return res.status(200).end(`Added: ${data.length} ep`);
   } catch (e) {
