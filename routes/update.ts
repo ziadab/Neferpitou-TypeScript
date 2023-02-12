@@ -63,7 +63,7 @@ router.get("/", async (req: Request<{}, {}, {}, UpdateQuery>, res) => {
     await newSheet.addRows(data);
 
     TelegramService.sendMessage(
-      `Update has been used by the following token: ${token}\nFrom: ${from}\nTo:${to}\nAdded: ${data.length} ep`,
+      `Update has been used by the following token: ${token}\nFrom: ${from}\nTo:${to}\n\nAdded: ${data.length} ep`,
       parseInt(process.env.ZIAD_CHAT_ID!)
     );
 
@@ -72,7 +72,7 @@ router.get("/", async (req: Request<{}, {}, {}, UpdateQuery>, res) => {
     //@ts-ignore
     TelegramService.sendMessage(
       //@ts-ignore
-      `Error happen while update with the following parameters:\nFrom: ${from}\nTo:${to}\nToken: ${token}\nError: ${e.message}`,
+      `Error happen while update with the following parameters:\nFrom: ${from}\nTo:${to}\nToken: ${token}\n\n${e.message}`,
       parseInt(process.env.ZIAD_CHAT_ID!)
     );
     //@ts-ignore
