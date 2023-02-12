@@ -8,6 +8,11 @@ const compliments: string[] = [
   "NARIIIII 3LA 7TA OPAPAPAAAA",
   "For today kayna a song for you 🎶\nhttps://youtu.be/0gCEGo8DJK8\nPS: Kolxi 3la lyrics ",
   "We all have ups and downs hania for today 5eda makayn gir l upat xD",
+  "You did amazing today, don't let someone tell u otherwise 🖤",
+  "You have a heart of gold, always willing to lend a hand and offer a warm embrace",
+  "Your kindness and compassion never fail to touch my heart, and I am grateful to know you",
+  "Your love and devotion are like a warm fire on a cold night, and that something u should be proud about",
+  "Your smile is like a ray of sunshine on a cloudy day, people are lucky that they saw it today 😩",
 ];
 
 export const getCustumeCompliment = (): string => {

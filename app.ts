@@ -7,6 +7,7 @@ import telegramHandler from "./routes/telegram";
 import cronHandler from "./routes/cron";
 import typeformHandler from "./routes/typeform";
 import complimentHandler from "./routes/compliment";
+import updateHandler from "./routes/update";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use("/telegram", telegramHandler);
 app.use("/cron", cronHandler);
 app.use("/typeform", typeformHandler);
 app.use("/compliment", complimentHandler);
+app.use("/update", updateHandler);
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });

@@ -3,7 +3,7 @@ documents: "./**/*.gql"
 schema:
   https://gis-api.aiesec.org/graphql:
     headers:
-      Authorization: ${AIESEC_TOKEN}
+      Authorization: ${MCVP}
 generates:
   api/index.ts:
     plugins:

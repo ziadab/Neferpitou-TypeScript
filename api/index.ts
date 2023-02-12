@@ -19,110 +19,6 @@ export type Scalars = {
   JSON: any;
 };
 
-export type Accommodation = {
-  __typename?: 'Accommodation';
-  accommodation_availabilities?: Maybe<AccommodationAvailabilityConnection>;
-  accommodation_availability_status?: Maybe<Scalars['JSON']>;
-  address_detail?: Maybe<AddressInfo>;
-  assigned_applications?: Maybe<OpportunityApplicationConnection>;
-  benefits?: Maybe<Array<Maybe<ConstantMap>>>;
-  contact_number?: Maybe<Scalars['String']>;
-  country_code?: Maybe<Scalars['String']>;
-  created_at?: Maybe<Scalars['DateTime']>;
-  host_image?: Maybe<ImageType>;
-  host_name?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  images?: Maybe<Array<Maybe<ImageType>>>;
-  lc?: Maybe<Office>;
-  number_of_rooms?: Maybe<Scalars['String']>;
-  occupants?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-  todo_type?: Maybe<TodoType>;
-  updated_at?: Maybe<Scalars['DateTime']>;
-};
-
-
-export type AccommodationAccommodation_AvailabilitiesArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-};
-
-
-export type AccommodationAssigned_ApplicationsArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-};
-
-export type AccommodationAssignment = {
-  __typename?: 'AccommodationAssignment';
-  accommodation?: Maybe<Accommodation>;
-  end_date?: Maybe<Scalars['Date']>;
-  id?: Maybe<Scalars['ID']>;
-  opportunity_application?: Maybe<OpportunityApplication>;
-  start_date?: Maybe<Scalars['Date']>;
-};
-
-/** The connection type for AccommodationAssignment. */
-export type AccommodationAssignmentConnection = {
-  __typename?: 'AccommodationAssignmentConnection';
-  /** A list of edges. */
-  edges?: Maybe<Array<Maybe<AccommodationAssignmentEdge>>>;
-  /** Facets object */
-  facets?: Maybe<Scalars['JSON']>;
-  /** A list of nodes. */
-  nodes?: Maybe<Array<Maybe<AccommodationAssignment>>>;
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** Total count of items */
-  total_count?: Maybe<Scalars['Int']>;
-};
-
-/** An edge in a connection. */
-export type AccommodationAssignmentEdge = {
-  __typename?: 'AccommodationAssignmentEdge';
-  /** A cursor for use in pagination. */
-  cursor: Scalars['String'];
-  /** The item at the end of the edge. */
-  node?: Maybe<AccommodationAssignment>;
-};
-
-export type AccommodationAvailability = {
-  __typename?: 'AccommodationAvailability';
-  created_at?: Maybe<Scalars['DateTime']>;
-  end_date?: Maybe<Scalars['Date']>;
-  id: Scalars['ID'];
-  start_date?: Maybe<Scalars['Date']>;
-  updated_at?: Maybe<Scalars['DateTime']>;
-};
-
-/** The connection type for AccommodationAvailability. */
-export type AccommodationAvailabilityConnection = {
-  __typename?: 'AccommodationAvailabilityConnection';
-  /** A list of edges. */
-  edges?: Maybe<Array<Maybe<AccommodationAvailabilityEdge>>>;
-  /** Facets object */
-  facets?: Maybe<Scalars['JSON']>;
-  /** A list of nodes. */
-  nodes?: Maybe<Array<Maybe<AccommodationAvailability>>>;
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** Total count of items */
-  total_count?: Maybe<Scalars['Int']>;
-};
-
-/** An edge in a connection. */
-export type AccommodationAvailabilityEdge = {
-  __typename?: 'AccommodationAvailabilityEdge';
-  /** A cursor for use in pagination. */
-  cursor: Scalars['String'];
-  /** The item at the end of the edge. */
-  node?: Maybe<AccommodationAvailability>;
-};
-
 export type AddressInfo = {
   __typename?: 'AddressInfo';
   address_1?: Maybe<Scalars['String']>;
@@ -174,6 +70,7 @@ export type ApplicationFilter = {
   earliest_start_date?: InputMaybe<DateInput>;
   experience_end_date?: InputMaybe<DateInput>;
   experience_start_date?: InputMaybe<DateInput>;
+  experience_type?: InputMaybe<Array<ExperienceType>>;
   favourite?: InputMaybe<Scalars['Boolean']>;
   for?: InputMaybe<Scalars['String']>;
   full_name?: InputMaybe<Scalars['String']>;
@@ -1355,7 +1252,13 @@ export type CommitteeDepartmentInput = {
 };
 
 export type CommitteeDepartmentMutationQuery = {
+  archiveCommitteeDepartment?: Maybe<CommitteeDepartmentType>;
   createCommitteeDepartment?: Maybe<CommitteeDepartmentType>;
+};
+
+
+export type CommitteeDepartmentMutationQueryArchiveCommitteeDepartmentArgs = {
+  id: Scalars['ID'];
 };
 
 
@@ -1364,12 +1267,19 @@ export type CommitteeDepartmentMutationQueryCreateCommitteeDepartmentArgs = {
   office_id: Scalars['ID'];
 };
 
+export type CommitteeDepartmentPermissionType = {
+  __typename?: 'CommitteeDepartmentPermissionType';
+  can_archive?: Maybe<Scalars['Boolean']>;
+};
+
 export type CommitteeDepartmentType = {
   __typename?: 'CommitteeDepartmentType';
   facets?: Maybe<Scalars['JSON']>;
   id: Scalars['ID'];
   member_positions?: Maybe<MemberPositionConnection>;
   name: Scalars['String'];
+  /** permissions */
+  permissions?: Maybe<CommitteeDepartmentPermissionType>;
 };
 
 
@@ -1948,11 +1858,13 @@ export type ContentSection = {
   __typename?: 'ContentSection';
   content_image?: Maybe<ImageType>;
   id?: Maybe<Scalars['ID']>;
+  position?: Maybe<Scalars['Int']>;
   redirect_url?: Maybe<Scalars['String']>;
 };
 
 export type ContentSectionInput = {
   content_image_file?: InputMaybe<ImageInput>;
+  position: Scalars['Int'];
   redirect_url?: InputMaybe<Scalars['String']>;
 };
 
@@ -1968,6 +1880,11 @@ export type ContentSectionMutationQueryCreateContentSectionArgs = {
 
 export type ContentSectionQuery = {
   contentSections?: Maybe<Array<Maybe<ContentSection>>>;
+};
+
+
+export type ContentSectionQueryContentSectionsArgs = {
+  sort_direction?: InputMaybe<BaseSortDirection>;
 };
 
 export type Contract = {
@@ -2844,6 +2761,12 @@ export type ExpaSettingsInput = {
   notify_on_managed_person_applications?: InputMaybe<Scalars['Boolean']>;
   send_to_aiesec_email?: InputMaybe<Scalars['Boolean']>;
 };
+
+export enum ExperienceType {
+  PartlyRemote = 'partly_remote',
+  Physical = 'physical',
+  Remote = 'remote'
+}
 
 export type Facets = {
   __typename?: 'Facets';
@@ -4054,7 +3977,7 @@ export type MemberPositionMutationQueryTerminateMemberPositionArgs = {
 
 export type MemberPositionMutationQueryUpdateMemberPositionArgs = {
   id: Scalars['Int'];
-  member_position: MemberPositionInput;
+  member_position: UpdateMemberPositionInput;
 };
 
 export type MemberPositionPermission = {
@@ -4148,6 +4071,7 @@ export type MutationType = AttachmentMutationQuery & BranchEmployeeMutationQuery
   approveBranchEmployee?: Maybe<BranchEmployee>;
   /** Organisation Approve */
   approveOrganisation?: Maybe<Organisation>;
+  archiveCommitteeDepartment?: Maybe<CommitteeDepartmentType>;
   /** Organisation Archived */
   archiveOrganisation?: Maybe<Organisation>;
   /** Archive Person */
@@ -5014,6 +4938,11 @@ export type MutationTypeApproveBranchEmployeeArgs = {
 
 
 export type MutationTypeApproveOrganisationArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationTypeArchiveCommitteeDepartmentArgs = {
   id: Scalars['ID'];
 };
 
@@ -6638,7 +6567,7 @@ export type MutationTypeUpdateMemberLeadArgs = {
 
 export type MutationTypeUpdateMemberPositionArgs = {
   id: Scalars['Int'];
-  member_position: MemberPositionInput;
+  member_position: UpdateMemberPositionInput;
 };
 
 
@@ -7296,6 +7225,7 @@ export type Opportunity = {
   description?: Maybe<Scalars['String']>;
   duration?: Maybe<Scalars['Int']>;
   earliest_start_date?: Maybe<Scalars['DateTime']>;
+  experience_type?: Maybe<ExperienceType>;
   external_opportunity_id?: Maybe<Scalars['String']>;
   external_opportunity_link?: Maybe<Scalars['String']>;
   fee_and_health_insurance?: Maybe<Scalars['JSON']>;
@@ -7464,7 +7394,6 @@ export type OpportunitySelection_ProcessesArgs = {
 export type OpportunityApplication = {
   __typename?: 'OpportunityApplication';
   acceptance_note_pdf_url?: Maybe<Scalars['String']>;
-  accommodation_assignments?: Maybe<AccommodationAssignmentConnection>;
   aiesec_contribution?: Maybe<Scalars['Int']>;
   /** allow_online_payments */
   allow_online_payments?: Maybe<Scalars['Boolean']>;
@@ -7560,14 +7489,6 @@ export type OpportunityApplication = {
   transactions?: Maybe<Array<Maybe<Transaction>>>;
   unsigned_contract_pdf_url?: Maybe<Scalars['String']>;
   updated_at?: Maybe<Scalars['DateTime']>;
-};
-
-
-export type OpportunityApplicationAccommodation_AssignmentsArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -8166,6 +8087,7 @@ export type OpportunityFilter = {
   earliest_start_date?: InputMaybe<DateInput>;
   exclude_home_mcs?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
   exclude_regions?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
+  experience_types?: InputMaybe<Array<ExperienceType>>;
   /** Available types - covered, not_covered */
   food_covered?: InputMaybe<Scalars['String']>;
   /** Available types - provided, not_provided */
@@ -8226,6 +8148,7 @@ export type OpportunityInput = {
   duration_max?: InputMaybe<Scalars['Int']>;
   duration_min?: InputMaybe<Scalars['Int']>;
   earliest_start_date?: InputMaybe<Scalars['DateTime']>;
+  experience_type?: InputMaybe<ExperienceType>;
   external_opportunity_id?: InputMaybe<Scalars['String']>;
   external_opportunity_link?: InputMaybe<Scalars['String']>;
   google_place_id?: InputMaybe<Scalars['String']>;
@@ -11087,6 +11010,7 @@ export type ProgrammeFee = {
   created_at?: Maybe<Scalars['String']>;
   currency?: Maybe<Currency>;
   enabled?: Maybe<Scalars['Boolean']>;
+  experience_type?: Maybe<ExperienceType>;
   fee?: Maybe<Scalars['Int']>;
   fee_for?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -11876,6 +11800,11 @@ export type QueryTypeConstantsArgs = {
   parent_id?: InputMaybe<Scalars['ID']>;
   type_id?: InputMaybe<Scalars['String']>;
   type_ids?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QueryTypeContentSectionsArgs = {
+  sort_direction?: InputMaybe<BaseSortDirection>;
 };
 
 
@@ -14188,7 +14117,7 @@ export type TodoTypeTodosArgs = {
 };
 
 /** Todoable polymorphic object */
-export type TodoableUnion = Accommodation | Event | Office | Opportunity | OpportunityApplication | Organisation | Person;
+export type TodoableUnion = Event | Office | Opportunity | OpportunityApplication | Organisation | Person;
 
 export type Transaction = {
   __typename?: 'Transaction';
@@ -14206,6 +14135,14 @@ export type Transaction = {
 export type UpdateCommitteeTargetInput = {
   committee_target?: InputMaybe<CommitteeTargetInput>;
   id: Scalars['ID'];
+};
+
+export type UpdateMemberPositionInput = {
+  duration_id?: InputMaybe<Scalars['Int']>;
+  end_date?: InputMaybe<Scalars['Date']>;
+  focus_products?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
+  start_date?: InputMaybe<Scalars['Date']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 export type UpdateQuestionInput = {
@@ -14412,8 +14349,8 @@ export const GetPeopleDocument = gql`
   people(
     q: ""
     page: 1
-    per_page: 200
-    filters: {registered: {from: $from, to: $to}, home_committee: 2359}
+    per_page: 400
+    filters: {registered: {from: $from, to: $to}}
   ) {
     data {
       id
