@@ -1,11 +1,16 @@
 import { Router } from "express";
+import updateCron from "../api/updateCron";
 import TelegramService from "../services/telegram";
 import getCompliment from "../utils/getCompliment";
 import {
   getCustumeCompliment,
   getZiadCompliment,
 } from "../utils/getCustomeCompliments";
+
 const router = Router();
+
+const random = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min)) + min;
 
 router.post("/", async (req, res) => {
   const users = [
@@ -25,6 +30,17 @@ router.post("/", async (req, res) => {
         : getCustumeCompliment();
     await TelegramService.sendMessage(compliment, user.chat_id);
   });
+
+  const hours = random(0, 23);
+  const minutes = random(0, 59);
+
+  await updateCron(hours, minutes);
+
+  TelegramService.sendMessage(
+    `Next compliment will be sent at ${hours}:${minutes}`,
+    parseInt(process.env.ZIAD_CHAT_ID!)
+  );
+
   return res.status(200).send("OK");
 });
 
