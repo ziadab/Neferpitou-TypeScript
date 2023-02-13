@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 
   users.map(async (user) => {
     const compliment =
-      Math.random() > 0.6
+      Math.random() > 0.65
         ? await getCompliment()
         : user.name === "Ziad"
         ? getZiadCompliment()
