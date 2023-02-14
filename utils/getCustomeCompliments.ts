@@ -13,6 +13,7 @@ const compliments: string[] = [
   "Your kindness and compassion never fail to touch my heart, and I am grateful to know you",
   "Your love and devotion are like a warm fire on a cold night, and that something u should be proud about",
   "Your smile is like a ray of sunshine on a cloudy day, people are lucky that they saw it today 😩",
+  "I'm so proud of how hard you are working on yourself 💛",
 ];
 
 export const getCustumeCompliment = (): string => {
