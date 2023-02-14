@@ -19,6 +19,7 @@ router.post("/", async (req, res) => {
     { chat_id: 1581070212, name: "Mouna" },
     { chat_id: 5490284002, name: "Meryem" },
     { chat_id: 5360452810, name: "Malak" },
+    { chat_id: 5755632631, name: "Mimi the cat" },
   ];
 
   users.map(async (user) => {
