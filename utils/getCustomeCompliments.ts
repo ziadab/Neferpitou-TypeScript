@@ -14,7 +14,7 @@ const compliments: string[] = [
   "Your love and devotion are like a warm fire on a cold night, and that something u should be proud about",
   "Your smile is like a ray of sunshine on a cloudy day, people are lucky that they saw it today 😩",
   "I'm so proud of how hard you are working on yourself 💛",
-  "They say everything is a reflection of light, and if that's the case then you're the reflection of the combination of the prettiest lights that exists"
+  "They say everything is a reflection of light, and if that's the case then you're the reflection of the combination of the prettiest lights that exists",
 ];
 
 export const getCustumeCompliment = (): string => {
@@ -28,6 +28,13 @@ export const getZiadCompliment = (): string => {
     "All eyes on me but my eyes on you 💅",
     "Your the best thing that happen to my life ✨",
     "You have been in my mind all day long, NAKED 🥵",
+    "How I wish I could kiss every inch of you, your body and soul",
+    "My heart is so full of you. I can hardly call it my own",
+    "And maybe I'll never be able to find the words to describe just how much you mean to me, but I'll spend the rest of my life trying",
+    "All roads lead to you, even those I took to forget you",
+    "The difference between you and the sky is when you laugh I forget about the sky",
+    "If I could show you how I felt about you, I'd require every art gallery on this earth",
+    "If I could only hold one thing, I'd make sure that it's your hand",
   ];
 
   return modified_compliment[
