@@ -37,6 +37,11 @@ export const getZiadCompliment = (): string => {
     "If I could show you how I felt about you, I'd require every art gallery on this earth",
     "If I could only hold one thing, I'd make sure that it's your hand",
     "If I were a cat, I would spend all my lives searching for you",
+    "I'm this close 🤏 to worship the ground you walk on",
+    "If I could choose to be anywhere I'd still be standing next to you",
+    "Any placce that we travel, your eyes would still have the prettiest view",
+    "If I could only write poems (technically I can learn that in future if u give me that ability :)), all my love poems would have your name",
+    "If I could keep one photograph it would be your smile that's in the frame",
   ];
 
   return modified_compliment[
