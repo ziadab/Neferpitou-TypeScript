@@ -15,6 +15,7 @@ const compliments: string[] = [
   "Your smile is like a ray of sunshine on a cloudy day, people are lucky that they saw it today 😩",
   "I'm so proud of how hard you are working on yourself 💛",
   "They say everything is a reflection of light, and if that's the case then you're the reflection of the combination of the prettiest lights that exists",
+  "How strange to dream of you even when I'm wide awake",
 ];
 
 export const getCustumeCompliment = (): string => {
@@ -35,6 +36,7 @@ export const getZiadCompliment = (): string => {
     "The difference between you and the sky is when you laugh I forget about the sky",
     "If I could show you how I felt about you, I'd require every art gallery on this earth",
     "If I could only hold one thing, I'd make sure that it's your hand",
+    "If I were a cat, I would spend all my lives searching for you",
   ];
 
   return modified_compliment[
