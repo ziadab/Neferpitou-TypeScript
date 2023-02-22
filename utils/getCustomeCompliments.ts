@@ -43,6 +43,7 @@ export const getZiadCompliment = (): string => {
     "Any placce that we travel, your eyes would still have the prettiest view",
     "If I could only write poems (technically I can learn that in future if u give me that ability :)), all my love poems would have your name",
     "If I could keep one photograph it would be your smile that's in the frame",
+    "I want in fact more of you. In my mind I am dressing you with light, I'm wrapping you up in blankets of complete acceptance and then I give myself to you. I long without longing, as though I am unconscious and absorbed in neutrality and apathy, really, utterly long for every bit of you",
   ];
 
   return modified_compliment[
