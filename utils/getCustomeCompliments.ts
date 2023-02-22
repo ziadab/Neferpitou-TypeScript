@@ -17,6 +17,7 @@ const compliments: string[] = [
   "They say everything is a reflection of light, and if that's the case then you're the reflection of the combination of the prettiest lights that exists",
   "How strange to dream of you even when I'm wide awake",
   "I wish I could hold your heart in the way you deserve. I'm so sorry someone was so careless with it",
+  "Your creativity and your manner is always the best and that’s what all people are looking for but you you are special because you have it par nature 👀",
 ];
 
 export const getCustumeCompliment = (): string => {
