@@ -14350,7 +14350,7 @@ export const GetPeopleDocument = gql`
     q: ""
     page: 1
     per_page: 400
-    filters: {registered: {from: $from, to: $to}}
+    filters: {registered: {from: $from, to: $to}, home_committee: 2359}
   ) {
     data {
       id
