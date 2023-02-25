@@ -47,6 +47,9 @@ export const getZiadCompliment = (): string => {
     "I want in fact more of you. In my mind I am dressing you with light, I'm wrapping you up in blankets of complete acceptance and then I give myself to you. I long without longing, as though I am unconscious and absorbed in neutrality and apathy, really, utterly long for every bit of you",
     "I don't love you with my heart and mind, I love you with my soul, in case my mind forgets and my heart stops",
     "I don't know how to become one with you.\nIf you're heaven, then tell me. I will kneel to every god\nIf you're hell then tell me. I will fill the earth with sins",
+    "The gods don't listen to people like me, but I would go on my knees and beg them to let me keep you. You were once the bane of my existance...and now, you are the center of it",
+    "You're very much like a book that can't be put back on the shelf because the story is too good and what is being read is too important to be left unfinished to stop. I look forward to learning all I can about you",
+    "You are deeper and more intriguing than any philosophy I've ever read. I'm enamored with you",
   ];
 
   return modified_compliment[
