@@ -50,7 +50,9 @@ export const getZiadCompliment = (): string => {
     "The gods don't listen to people like me, but I would go on my knees and beg them to let me keep you. You were once the bane of my existance...and now, you are the center of it",
     "You're very much like a book that can't be put back on the shelf because the story is too good and what is being read is too important to be left unfinished to stop. I look forward to learning all I can about you",
     "You are deeper and more intriguing than any philosophy I've ever read. I'm enamored with you",
-    "You make me feel all the love that I have lost in my lifetime"
+    "You make me feel all the love that I have lost in my lifetime",
+    "I don't know that I ever lived before laying eyes on the likes of you",
+    "How strange. I dream of you even though I'm wide awake",
   ];
 
   return modified_compliment[
