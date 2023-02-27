@@ -37,9 +37,8 @@ router.post("/", async (req, res) => {
 
   await updateCron(hours, minutes);
 
-  TelegramService.sendMessage(
-    `Next compliment will be sent at ${hours}:${minutes}`,
-    parseInt(process.env.ZIAD_CHAT_ID!)
+  TelegramService.sendNotify(
+    `Next compliment will be sent at ${hours}:${minutes}`
   );
 
   return res.status(200).send("OK");

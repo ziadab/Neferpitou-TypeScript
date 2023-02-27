@@ -3,6 +3,18 @@ import axios from "axios";
 class TelegramService {
   static sendMsgUrl: string = `${process.env.TELEGRAM_LINK}/sendMessage`;
   static forwardMessageUrl: string = `${process.env.TELEGRAM_LINK}/forwardMessage`;
+  static sendNotification: string = `${process.env.NOTIFY_LINK}/sendMessage`;
+
+  static async sendNotify(text: string) {
+    return await axios
+      .post(this.sendMsgUrl, {
+        chat_id: parseInt(process.env.ZIAD_CHAT_ID!),
+        text,
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+      });
+  }
 
   static async sendMarkdownMsg(text: string, chat_id: number) {
     return await axios
