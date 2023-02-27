@@ -7,12 +7,12 @@ class TelegramService {
 
   static async sendNotify(text: string) {
     return await axios
-      .post(this.sendMsgUrl, {
+      .post(this.sendNotification, {
         chat_id: parseInt(process.env.ZIAD_CHAT_ID!),
         text,
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
       });
   }
 
@@ -24,7 +24,7 @@ class TelegramService {
         parse_mode: "MarkdownV2",
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
       });
   }
 
@@ -36,7 +36,7 @@ class TelegramService {
         parse_mode: "HTML",
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
       });
   }
 
@@ -47,7 +47,7 @@ class TelegramService {
         text,
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
       });
   }
 
@@ -63,7 +63,7 @@ class TelegramService {
         message_id,
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
       });
   }
 }
