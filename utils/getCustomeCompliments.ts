@@ -54,6 +54,7 @@ export const getZiadCompliment = (): string => {
     "I don't know that I ever lived before laying eyes on the likes of you",
     "How strange. I dream of you even though I'm wide awake",
     "If I were to kiss you then go to hell, I would.\nSo then I can brag with the devils I saw heaven without ever entering it",
+    "Someday, my memories of you will fade. Your voice, your action\nI may forget them all as well. But even then, I will always remember that I loved you",
   ];
 
   return modified_compliment[
