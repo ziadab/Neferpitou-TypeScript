@@ -55,6 +55,8 @@ export const getZiadCompliment = (): string => {
     "How strange. I dream of you even though I'm wide awake",
     "If I were to kiss you then go to hell, I would.\nSo then I can brag with the devils I saw heaven without ever entering it",
     "Someday, my memories of you will fade. Your voice, your action\nI may forget them all as well. But even then, I will always remember that I loved you",
+    "I notice every single one your features. I could stare at you for hours, you're a work of art as yourself and even I don't deserve you but I'm honored you bless me with your presence",
+    "I hope the light at the end of the tunnel hold a solhouette of you, for there is no afterlife worth living without your embrace",
   ];
 
   return modified_compliment[
