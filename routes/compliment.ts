@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
         ? getZiadCompliment()
         : getCustumeCompliment();
     await TelegramService.sendMessage(compliment, user.chat_id);
+    await TelegramService.sendNotify(`${user.name}: ${compliment}`);
   });
 
   const hours = random(0, 23);
