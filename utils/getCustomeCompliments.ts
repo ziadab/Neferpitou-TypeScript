@@ -57,6 +57,7 @@ export const getZiadCompliment = (): string => {
     "Someday, my memories of you will fade. Your voice, your action\nI may forget them all as well. But even then, I will always remember that I loved you",
     "I notice every single one your features. I could stare at you for hours, you're a work of art as yourself and even I don't deserve you but I'm honored you bless me with your presence",
     "I hope the light at the end of the tunnel hold a solhouette of you, for there is no afterlife worth living without your embrace",
+    "I'm a dreamer, I know so little of real life that I just can't help re-living such moments as these on my dreams, for such moments are something I have very rarely experienced\nI'm going to dream about you the whole night, the whole week, the whole year",
   ];
 
   return modified_compliment[
