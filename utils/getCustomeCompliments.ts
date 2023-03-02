@@ -58,6 +58,12 @@ export const getZiadCompliment = (): string => {
     "I notice every single one your features. I could stare at you for hours, you're a work of art as yourself and even I don't deserve you but I'm honored you bless me with your presence",
     "I hope the light at the end of the tunnel hold a solhouette of you, for there is no afterlife worth living without your embrace",
     "I'm a dreamer, I know so little of real life that I just can't help re-living such moments as these on my dreams, for such moments are something I have very rarely experienced\nI'm going to dream about you the whole night, the whole week, the whole year",
+    "Who cares about perfection?\nEven the moon is not perfect, it is full of craters.\nThe sea is incredibly beatiful but salty and dark in depth\nTheSky is always infinite, but often cloudy.\nSpp everything that is beatiful isn't perfect. Therefore, everyone can be special to someone.",
+    "Do you think that there is a corner of this earth that you could travel to far away enough to free me from this torment? I'm a gentleman.\nMy father raise me to act with honor, but tha honor is hanging by a thread that grows more precarious with every moment I spend in your presence.\nYou are the bane of my existance. and the object of all my desires. night and day, I dream of you",
+    "I would recognise you in total darkness, were you mute and I deaf. I would recognise you in another lifetime entirely, in different bodies, different times. and I would love you in all of this, until the very last star in the sky burnt out into oblivion",
+    "from the moment I met you, all this years ago, not a day has gone by where I haven't thought of you. and now that I'm with you again, I'm in agony, the closer I get to you the worse it gets. the thought of not being with you, I can't breathe. I'm haunted by the kiss that you should never given me",
+    "For the stars themselves could not hope to outshine you my mosy beloved light",
+    "One can qaze to the sky in search of heaven, or instead behold devine beauty through the glistenning of your eyes",
   ];
 
   return modified_compliment[
