@@ -64,6 +64,10 @@ export const getZiadCompliment = (): string => {
     "from the moment I met you, all this years ago, not a day has gone by where I haven't thought of you. and now that I'm with you again, I'm in agony, the closer I get to you the worse it gets. the thought of not being with you, I can't breathe. I'm haunted by the kiss that you should never given me",
     "For the stars themselves could not hope to outshine you my mosy beloved light",
     "One can qaze to the sky in search of heaven, or instead behold devine beauty through the glistenning of your eyes",
+    "I will love you, even when all the mortals have forgotten about us and we are nothing but stardust",
+    "If I could rearrange the universe I'd replace her as every star visible so that I could gaze upon her beauty every night",
+    "In the end be it fire, flood or plague I will not notice any of it as long as you are in my gaze",
+    "I want ti make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
   ];
 
   return modified_compliment[
