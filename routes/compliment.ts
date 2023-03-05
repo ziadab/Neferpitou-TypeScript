@@ -12,7 +12,7 @@ const router = Router();
 const random = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min;
 
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
   const users = [
     { chat_id: 513915705, name: "Ziad" },
     { chat_id: 1058010537, name: "Hanae" },

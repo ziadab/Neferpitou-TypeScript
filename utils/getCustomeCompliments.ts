@@ -70,7 +70,7 @@ export const getZiadCompliment = (): string => {
     "I will love you, even when all the mortals have forgotten about us and we are nothing but stardust",
     "If I could rearrange the universe I'd replace her as every star visible so that I could gaze upon her beauty every night",
     "In the end be it fire, flood or plague I will not notice any of it as long as you are in my gaze",
-    "I want ti make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
+    "I want to make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
   ];
 
   return modified_compliment[
