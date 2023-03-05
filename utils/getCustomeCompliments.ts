@@ -18,6 +18,8 @@ const compliments: string[] = [
   "How strange to dream of you even when I'm wide awake",
   "I wish I could hold your heart in the way you deserve. I'm so sorry someone was so careless with it",
   "Your creativity and your manner is always the best and that’s what all people are looking for but you you are special because you have it par nature 👀",
+  "Your eyes were portraits of a world without cruelty",
+  "If I was a vampire, and you were the sun I would never look for shade, I would rather burn at the sight of your shining beauty",
 ];
 
 export const getCustumeCompliment = (): string => {
