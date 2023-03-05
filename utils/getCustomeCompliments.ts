@@ -72,6 +72,7 @@ export const getZiadCompliment = (): string => {
     "In the end be it fire, flood or plague I will not notice any of it as long as you are in my gaze",
     "I want to make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
     "Perhaps love isn't love when I say you are what I love the most. you are the knofe I turn inside myself",
+    "I just need a quiet place where I can scream how I love you",
   ];
 
   return modified_compliment[
