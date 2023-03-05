@@ -29,6 +29,7 @@ export const getCustumeCompliment = (): string => {
 export const getZiadCompliment = (): string => {
   const modified_compliment = [
     ...compliments,
+    "Say you'll share with me one love, one lifetime. Lead me, save me from my solitude.\nSay you want me with you, here beside you. Anywhere you go, let me go too",
     "I LOOOOOOOOOOOOOOOOOOOVE YOUUUU 🖤",
     "All eyes on me but my eyes on you 💅",
     "Your the best thing that happen to my life ✨",
