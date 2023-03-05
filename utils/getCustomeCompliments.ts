@@ -71,6 +71,7 @@ export const getZiadCompliment = (): string => {
     "If I could rearrange the universe I'd replace her as every star visible so that I could gaze upon her beauty every night",
     "In the end be it fire, flood or plague I will not notice any of it as long as you are in my gaze",
     "I want to make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
+    "Perhaps love isn't love when I say you are what I love the most. you are the knofe I turn inside myself",
   ];
 
   return modified_compliment[
