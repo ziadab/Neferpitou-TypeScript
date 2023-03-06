@@ -71,6 +71,8 @@ const compliments: string[] = [
   "What does it matter how many lovers you have if none of them gives you the universe",
   "Peace will come, surely. But I can imagine no other peace than that of our two bodies bound together of our gaze given over each other I have no other homeland but you",
   "If I was blinded the moment I laid eyes on you, I would not grieve, for in that instance I truly gazed upon perfection",
+  "The sunflowers would mistake you for the sun, all turning to look at you",
+  "I may get lost in a maze, but I shall always find an exit, but when I get lost in your eyes, their is no escape",
 ];
 
 export const getCustumeCompliment = (): string => {
