@@ -68,6 +68,7 @@ const compliments: string[] = [
   "And when I look at your perfection, I connect the freckles on your face to make my own constellation. Ones only I get to see and admire, and I become lost in a galaxy that is only you",
   "If you were the sun, then I would be destined to become lcarus, flying even closer to your blazing rays, as I am doomed to fall to my demise",
   "Say you'll share with me one love, one lifetime. Lead me, save me from my solitude.\nSay you want me with you, here beside you. Anywhere you go, let me go too",
+  "What does it matter how many lovers you have if none of them gives you the universe",
 ];
 
 export const getCustumeCompliment = (): string => {
