@@ -80,6 +80,7 @@ const compliments: string[] = [
   "I miss you deeply, unfathomably, senselessly, terribly",
   "You're the knofe I turn inside myself",
   "I would travel to every country and buy a flower from there to make a bouquet, so I could give you the world",
+  "I will cross hundreds of seas and oceans without sinking to reach you, see your eyes and sink completly into their depths",
 ];
 
 export const getCustumeCompliment = (): string => {
