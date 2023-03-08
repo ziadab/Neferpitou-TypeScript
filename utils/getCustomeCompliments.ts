@@ -81,6 +81,10 @@ const compliments: string[] = [
   "You're the knofe I turn inside myself",
   "I would travel to every country and buy a flower from there to make a bouquet, so I could give you the world",
   "I will cross hundreds of seas and oceans without sinking to reach you, see your eyes and sink completly into their depths",
+  "With dress of black and hair of night, Stands tall a maid, a stunning sight, her beauty fair, her grace divine, a sight to leave all hearts in line",
+  "I hadn't told them about u but they saw u bathing in my eyes I hadn't told thrm about u but they saw u in my written words the perfume of love cannot be concealed",
+  "I would spend the entirety of my unholy existence worshiping evry breath you draw if it meant I could share the same oxygen as you",
+  "Someday, my memories of her will fade. her voice, her actions... I might forget them as well, but even then I will always remember that I loved u",
 ];
 
 export const getCustumeCompliment = (): string => {
