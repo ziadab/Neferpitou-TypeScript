@@ -79,6 +79,7 @@ const compliments: string[] = [
   "You are my heart, my life my one and only thought",
   "I miss you deeply, unfathomably, senselessly, terribly",
   "You're the knofe I turn inside myself",
+  "I would travel to every country and buy a flower from there to make a bouquet, so I could give you the world",
 ];
 
 export const getCustumeCompliment = (): string => {
