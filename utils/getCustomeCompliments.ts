@@ -73,6 +73,12 @@ const compliments: string[] = [
   "If I was blinded the moment I laid eyes on you, I would not grieve, for in that instance I truly gazed upon perfection",
   "The sunflowers would mistake you for the sun, all turning to look at you",
   "I may get lost in a maze, but I shall always find an exit, but when I get lost in your eyes, their is no escape",
+  "You are to me what the sun is to the planets. You are the light and warmth to every part of my being. You bring life to parts of myself I once thought to bead. without you I'm nothing but a cold lonely darkness",
+  "If you remember me then I don't care if everyone else forgets",
+  "And though my pain is endless, you will be the alcohol poured unto my wounds that will numb my sorrows",
+  "You are my heart, my life my one and only thought",
+  "I miss you deeply, unfathomably, senselessly, terribly",
+  "You're the knofe I turn inside myself",
 ];
 
 export const getCustumeCompliment = (): string => {
