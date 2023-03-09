@@ -96,6 +96,7 @@ const compliments: string[] = [
   "If I was blinded the moment I lay eyes on you, I would not grieve, for in the instance, I truly gazed upon perfection",
   "like a moth to a flame, i shall be eternally mesmerised by your warmth and mere existence, and I'll give anything to hold you, even if it burns me",
   "If I had to wait my entire life for your love, I would. for when I've withered away, I'd be glad i got to experience heaven before I even reached it.",
+  "I could recongnize you by touch alone, by smell. I would know you blindlyn by the way you breaths came and your feet struck the earth. I would know you in death, at the end of the world",
 ];
 
 export const getCustumeCompliment = (): string => {
