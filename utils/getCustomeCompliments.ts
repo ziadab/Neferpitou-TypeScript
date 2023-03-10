@@ -56,7 +56,7 @@ const compliments: string[] = [
   "If I could rearrange the universe I'd replace her as every star visible so that I could gaze upon her beauty every night",
   "In the end be it fire, flood or plague I will not notice any of it as long as you are in my gaze",
   "I want to make romeo jealous. I want the dead lovers of the world to hear our laughter and grow sad. I want a breath of our passion to stir their dust into consciousness, to wake their ashes into pain",
-  "Perhaps love isn't love when I say you are what I love the most. you are the knofe I turn inside myself",
+  "Perhaps love isn't love when I say you are what I love the most. you are the knife I turn inside myself",
   "I just need a quiet place where I can scream how I love you",
   "Your eyes seem to be expecting miracles I would be most honored and willing to perform",
   "If someday the moon calls you by name, don't be surprised. because every night I tell it about you",
@@ -97,6 +97,8 @@ const compliments: string[] = [
   "like a moth to a flame, i shall be eternally mesmerised by your warmth and mere existence, and I'll give anything to hold you, even if it burns me",
   "If I had to wait my entire life for your love, I would. for when I've withered away, I'd be glad i got to experience heaven before I even reached it.",
   "I could recongnize you by touch alone, by smell. I would know you blindlyn by the way you breaths came and your feet struck the earth. I would know you in death, at the end of the world",
+  "You look best when you're 😉",
+  "You're definition of beauty and grace, a sight that I can't erase. with every glance, my heart beats anew. Your existance, a perfection that's true",
 ];
 
 export const getCustumeCompliment = (): string => {
