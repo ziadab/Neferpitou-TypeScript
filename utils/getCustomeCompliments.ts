@@ -106,6 +106,7 @@ const compliments: string[] = [
   "You are a thief, and I'm a beggar you have stolen everything from me. the air from my lungs, the heart in my chest, and all of the thoughts within my head.\nThe entirety of what you have stolen is yours, and I'm begging you to take more my love",
   "And If I knew a way to make you me the way I do, you would not dare to make use of it, for you are not deserving of such an ache",
   "Deafen me, and I will still hear you speak. Blind me, and I will still see your face. In your absence, my senses are full of your presence",
+  "when death takes my hand, I will hold you with the other and promise to find you in every lifetime",
 ];
 
 export const getCustumeCompliment = (): string => {
