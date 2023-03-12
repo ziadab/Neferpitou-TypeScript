@@ -99,6 +99,13 @@ const compliments: string[] = [
   "I could recongnize you by touch alone, by smell. I would know you blindlyn by the way you breaths came and your feet struck the earth. I would know you in death, at the end of the world",
   "You look best when you're 😉",
   "You're definition of beauty and grace, a sight that I can't erase. with every glance, my heart beats anew. Your existance, a perfection that's true",
+  "Like a piece of art, my eyes cannot help but gaze upon the strokes of which god has created, for he has envisioned a being as beautiful as you",
+  "I'll give you my army. I'll give you my crown. I will give you my throne. I'll give you anything you desire and more if it means you'll look at me again",
+  "And If I knew a way to make you miss me the way I do you I would not dare to make use of it, for you are not deserving of such an ache",
+  "like a work of art, my eyes cannot help but gaze upon the strokes of which god has created, for he has envisioned a being as beautiful as you",
+  "You are a thief, and I'm a beggar you have stolen everything from me. the air from my lungs, the heart in my chest, and all of the thoughts within my head.\nThe entirety of what you have stolen is yours, and I'm begging you to take more my love",
+  "And If I knew a way to make you me the way I do, you would not dare to make use of it, for you are not deserving of such an ache",
+  "Deafen me, and I will still hear you speak. Blind me, and I will still see your face. In your absence, my senses are full of your presence",
 ];
 
 export const getCustumeCompliment = (): string => {
