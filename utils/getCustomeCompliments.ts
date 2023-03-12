@@ -107,6 +107,7 @@ const compliments: string[] = [
   "And If I knew a way to make you me the way I do, you would not dare to make use of it, for you are not deserving of such an ache",
   "Deafen me, and I will still hear you speak. Blind me, and I will still see your face. In your absence, my senses are full of your presence",
   "when death takes my hand, I will hold you with the other and promise to find you in every lifetime",
+  "we are tied to one another, by the bonds of earth, by intelligence, heart and flesh, nothing\nI know can suprise or separate us",
 ];
 
 export const getCustumeCompliment = (): string => {
