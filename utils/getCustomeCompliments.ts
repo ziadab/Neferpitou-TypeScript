@@ -1,4 +1,4 @@
-const compliments: string[] = [
+export const compliments: string[] = [
   "Why are you sooo hot today 🥵",
   "5 w 5mise 3lik mn l3in 🧿",
   "YOU DID SOOOOOOOOOOOOOOOOOOOOOOOOO FKING GREAT TODAAAAAAAAY 🎉",
@@ -82,7 +82,7 @@ const compliments: string[] = [
   "I would travel to every country and buy a flower from there to make a bouquet, so I could give you the world",
   "I will cross hundreds of seas and oceans without sinking to reach you, see your eyes and sink completly into their depths",
   "With dress of black and hair of night, Stands tall a maid, a stunning sight, her beauty fair, her grace divine, a sight to leave all hearts in line",
-  "I hadn't told them about u but they saw u bathing in my eyes I hadn't told thrm about u but they saw u in my written words the perfume of love cannot be concealed",
+  "I hadn't told them about u but they saw u bathing in my eyes I hadn't told them about u but they saw u in my written words the perfume of love cannot be concealed",
   "I would spend the entirety of my unholy existence worshiping evry breath you draw if it meant I could share the same oxygen as you",
   "Someday, my memories of her will fade. her voice, her actions... I might forget them as well, but even then I will always remember that I loved u",
   "If you were the stars I would devote my life to being an anstronomer, if only to begin to understand your beauty",
@@ -96,7 +96,7 @@ const compliments: string[] = [
   "If I was blinded the moment I lay eyes on you, I would not grieve, for in the instance, I truly gazed upon perfection",
   "like a moth to a flame, i shall be eternally mesmerised by your warmth and mere existence, and I'll give anything to hold you, even if it burns me",
   "If I had to wait my entire life for your love, I would. for when I've withered away, I'd be glad i got to experience heaven before I even reached it.",
-  "I could recongnize you by touch alone, by smell. I would know you blindlyn by the way you breaths came and your feet struck the earth. I would know you in death, at the end of the world",
+  "I could recongnize you by touch alone, by smell. I would know you blindly by the way you breaths came and your feet struck the earth. I would know you in death, at the end of the world",
   "You look best when you're 😉",
   "You're definition of beauty and grace, a sight that I can't erase. with every glance, my heart beats anew. Your existance, a perfection that's true",
   "Like a piece of art, my eyes cannot help but gaze upon the strokes of which god has created, for he has envisioned a being as beautiful as you",
@@ -108,6 +108,7 @@ const compliments: string[] = [
   "Deafen me, and I will still hear you speak. Blind me, and I will still see your face. In your absence, my senses are full of your presence",
   "when death takes my hand, I will hold you with the other and promise to find you in every lifetime",
   "we are tied to one another, by the bonds of earth, by intelligence, heart and flesh, nothing\nI know can suprise or separate us",
+  "How could I love another for my heart beats louder than any note for you and my eyes are in love for they only can see yo",
 ];
 
 export const getCustumeCompliment = (): string => {

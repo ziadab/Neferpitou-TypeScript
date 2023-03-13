@@ -5,6 +5,7 @@ import getCompliment from "../utils/getCompliment";
 import {
   getCustumeCompliment,
   getZiadCompliment,
+  compliments,
 } from "../utils/getCustomeCompliments";
 
 const router = Router();
@@ -31,7 +32,7 @@ router.get("/", async (req, res) => {
         : user.name === "Ziad"
         ? getZiadCompliment()
         : getCustumeCompliment();
-    // const compliment = await getZiadCompliment();
+    // const compliment = compliments.at(-3);
     await TelegramService.sendMessage(compliment, user.chat_id);
     await TelegramService.sendNotify(`${user.name}: ${compliment}`);
   });
