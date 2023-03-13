@@ -109,6 +109,13 @@ export const compliments: string[] = [
   "when death takes my hand, I will hold you with the other and promise to find you in every lifetime",
   "we are tied to one another, by the bonds of earth, by intelligence, heart and flesh, nothing\nI know can suprise or separate us",
   "How could I love another for my heart beats louder than any note for you and my eyes are in love for they only can see yo",
+  "A melody so sweet that even the devil can resisy, such is the sound of your voice",
+  "And shall satan himself clib out of hell to take me with him into the darkness, in which he realises he will never be able to kill the light you brought into my unfulfilled soul",
+  "don't be shy about your insecurities, for the day and night switch turns to witness your beauty",
+  "you return like autumn and I fall everytime",
+  "the stars are jealous of your eyes cause they'll never shine as bright as them",
+  "if you were a painting, I'll spend decades perfecting hue and decades just to understand your beauty",
+  "No price is too great. No atrocity beyound my reach.\nFor you, I will do anything",
 ];
 
 export const getCustumeCompliment = (): string => {
