@@ -32,7 +32,8 @@ router.get("/", async (req, res) => {
         : user.name === "Ziad"
         ? getZiadCompliment()
         : getCustumeCompliment();
-    // const compliment = compliments.at(-3);
+    // const compliment = compliments.at(-2);
+    // // const compliment = getCustumeCompliment();
     await TelegramService.sendMessage(compliment, user.chat_id);
     await TelegramService.sendNotify(`${user.name}: ${compliment}`);
   });

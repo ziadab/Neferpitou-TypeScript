@@ -116,6 +116,13 @@ export const compliments: string[] = [
   "the stars are jealous of your eyes cause they'll never shine as bright as them",
   "if you were a painting, I'll spend decades perfecting hue and decades just to understand your beauty",
   "No price is too great. No atrocity beyound my reach.\nFor you, I will do anything",
+  "Your eyes are like the oceans depths, your voice is like a sweet caress.\nYour love is a rose in bloom, a beaty that will never fade or lose it perfume",
+  "I wouldn't mind if you were the last person I'd see before my eyes burn out from you beauty. Id rather go blind from a glimpse of your radiance then live 100 years without you",
+  "The light of the moon failed in comparison to the light of your soul",
+  "If I were dared to shout to the world how much I love you, I will simply whisper it in your ears",
+  "And if my heart has torn in half your name would be found in every vein, drop of blood and piece of flesh my heart is simply your home",
+  "Before you, my life was like a moonless night and then you shot across my sky like a meteor, suddenly everything was on fire, there was brilliancy, there was beauty",
+  "If it was a sin to stare into your eyes no god could save me from the inevitable consequences of my sins, for I would be condemmed to eternal agony",
 ];
 
 export const getCustumeCompliment = (): string => {
