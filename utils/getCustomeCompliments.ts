@@ -123,6 +123,10 @@ export const compliments: string[] = [
   "And if my heart has torn in half your name would be found in every vein, drop of blood and piece of flesh my heart is simply your home",
   "Before you, my life was like a moonless night and then you shot across my sky like a meteor, suddenly everything was on fire, there was brilliancy, there was beauty",
   "If it was a sin to stare into your eyes no god could save me from the inevitable consequences of my sins, for I would be condemmed to eternal agony",
+  "Your eyes are like clouds for even when they fill with sorrow and drown the land they paint the sky with unimaginable beauty",
+  "Your beauty is a flower, that blossoms within my heart, a sight so sweet and delicate, it tears my world apart",
+  "I'm sorry , I'm dreaming again but you must understand eyes like yours, my dear, carry within them acres of land",
+  "They say beauty is in the eye of the beholder, but the way you sway me with your warm embrace even the blind could picture your elegance",
 ];
 
 export const getCustumeCompliment = (): string => {
