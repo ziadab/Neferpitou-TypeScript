@@ -127,6 +127,7 @@ export const compliments: string[] = [
   "Your beauty is a flower, that blossoms within my heart, a sight so sweet and delicate, it tears my world apart",
   "I'm sorry , I'm dreaming again but you must understand eyes like yours, my dear, carry within them acres of land",
   "They say beauty is in the eye of the beholder, but the way you sway me with your warm embrace even the blind could picture your elegance",
+  "Your voice is like music to my ears, a symphony of sound that resonates within my soul. Each word you speak is a note carefully chosen and beatifully played, creating a melody that I never want to end",
 ];
 
 export const getCustumeCompliment = (): string => {
