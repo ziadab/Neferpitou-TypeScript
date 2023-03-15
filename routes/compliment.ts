@@ -26,14 +26,14 @@ router.get("/", async (req, res) => {
   ];
 
   users.map(async (user) => {
-    const compliment =
-      Math.random() > 0.65
-        ? await getCompliment()
-        : user.name === "Ziad"
-        ? getZiadCompliment()
-        : getCustumeCompliment();
+    // const compliment =
+    //   Math.random() > 0.65
+    //     ? await getCompliment()
+    //     : user.name === "Ziad"
+    //     ? getZiadCompliment()
+    //     : getCustumeCompliment();
     // const compliment = compliments.at(-2);
-    // // const compliment = getCustumeCompliment();
+    const compliment = getCustumeCompliment();
     await TelegramService.sendMessage(compliment, user.chat_id);
     await TelegramService.sendNotify(`${user.name}: ${compliment}`);
   });
