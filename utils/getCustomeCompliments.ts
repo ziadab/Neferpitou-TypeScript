@@ -128,6 +128,12 @@ export const compliments: string[] = [
   "I'm sorry , I'm dreaming again but you must understand eyes like yours, my dear, carry within them acres of land",
   "They say beauty is in the eye of the beholder, but the way you sway me with your warm embrace even the blind could picture your elegance",
   "Your voice is like music to my ears, a symphony of sound that resonates within my soul. Each word you speak is a note carefully chosen and beatifully played, creating a melody that I never want to end",
+  "When the sun is fortunate enough to fall upon your body, it creates no shadow, because nothing in this universe could replicate your beauty",
+  "I caught myself smiling and then I realized I was thinking about you",
+  "If the definition of perfection were to be defined by one person, you my love would be the one to define it",
+  "I don't know why I love you, I don't know how to explain it. the moment my eyes met yours, the storms that took over my mind stoped, the raging oceans inside me calmed, the skies cleared, the sun shined over me, I felt worm. I felt complete. I felt safe. you made my life worth living",
+  "If I give you a rose for evertime you crossed my mind, you would have but one cause the thought of you never left",
+  "How my heart will forget you and you resides in my soul",
 ];
 
 export const getCustumeCompliment = (): string => {
