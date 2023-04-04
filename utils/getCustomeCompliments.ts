@@ -134,6 +134,9 @@ export const compliments: string[] = [
   "I don't know why I love you, I don't know how to explain it. the moment my eyes met yours, the storms that took over my mind stoped, the raging oceans inside me calmed, the skies cleared, the sun shined over me, I felt worm. I felt complete. I felt safe. you made my life worth living",
   "If I give you a rose for evertime you crossed my mind, you would have but one cause the thought of you never left",
   "How my heart will forget you and you resides in my soul",
+  "It wasn't your eyes that me fall in love with you,\nIt wasn't your smile,\nyour beatifule face,\nor your body,\n\nIt was your heart.\nA heart that I knew I'd never see again",
+  "Until the day I die. I long to have no speek of shame, when I gaze up toward heaven, so I have tormented myself, even when the wind stirs the leaves.\nWith a heart that sings the stars, I will love all dying things.\nAnd I will walk the way that has been given to me.\nTonight, again, the winf brushes the stard",
+  "I hate waiting. but if waiting means being able to be with you, then I'll wait forever",
 ];
 
 export const getCustumeCompliment = (): string => {
