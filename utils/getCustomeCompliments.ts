@@ -137,6 +137,10 @@ export const compliments: string[] = [
   "It wasn't your eyes that me fall in love with you,\nIt wasn't your smile,\nyour beatifule face,\nor your body,\n\nIt was your heart.\nA heart that I knew I'd never see again",
   "Until the day I die. I long to have no speek of shame, when I gaze up toward heaven, so I have tormented myself, even when the wind stirs the leaves.\nWith a heart that sings the stars, I will love all dying things.\nAnd I will walk the way that has been given to me.\nTonight, again, the winf brushes the stard",
   "I hate waiting. but if waiting means being able to be with you, then I'll wait forever",
+  "Since we're all going to die, it's obvious that when and how doesn't matter",
+  "If I had to choose the sun or the moon or the starts, I would choose you. the only light in the sky that shines the brightest",
+  "She waq as gentle as a rose, as delicate as a daisy, as worm as sunflower, and more beautiful than any flower",
+  
 ];
 
 export const getCustumeCompliment = (): string => {
