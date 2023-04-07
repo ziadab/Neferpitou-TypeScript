@@ -140,7 +140,7 @@ export const compliments: string[] = [
   "Since we're all going to die, it's obvious that when and how doesn't matter",
   "If I had to choose the sun or the moon or the starts, I would choose you. the only light in the sky that shines the brightest",
   "She waq as gentle as a rose, as delicate as a daisy, as worm as sunflower, and more beautiful than any flower",
-  
+  "Accept humbly let go easily"
 ];
 
 export const getCustumeCompliment = (): string => {
