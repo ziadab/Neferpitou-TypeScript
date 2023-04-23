@@ -143,6 +143,9 @@ export const compliments: string[] = [
   "Accept humbly let go easily",
   "If you were a dreal, id never want to sleep",
   "If I would write you a song, It would be blank because id never write you a song, because you are the song",
+  "They say the hearts are connected\nI missed you, did you sense it?",
+  "يقولون القلوب عند بعضها\nانا اشثقت لك, انت حسيت?",
+  "And when we join our hands\nUnderneath the dinner table\nAnd smile with a curve so deep,\nThe heavens sing, and the earth shakes,\nWe are unique,\nBecause only we have ever\nFelt this type of love",
 ];
 
 export const getCustumeCompliment = (): string => {
