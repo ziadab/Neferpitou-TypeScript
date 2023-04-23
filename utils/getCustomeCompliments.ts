@@ -142,6 +142,7 @@ export const compliments: string[] = [
   "She waq as gentle as a rose, as delicate as a daisy, as worm as sunflower, and more beautiful than any flower",
   "Accept humbly let go easily",
   "If you were a dreal, id never want to sleep",
+  "If I would write you a song, It would be blank because id never write you a song, because you are the song",
 ];
 
 export const getCustumeCompliment = (): string => {
