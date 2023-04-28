@@ -146,6 +146,12 @@ export const compliments: string[] = [
   "They say the hearts are connected\nI missed you, did you sense it?",
   "يقولون القلوب عند بعضها\nانا اشثقت لك, انت حسيت?",
   "And when we join our hands\nUnderneath the dinner table\nAnd smile with a curve so deep,\nThe heavens sing, and the earth shakes,\nWe are unique,\nBecause only we have ever\nFelt this type of love",
+  "I want you even in your sadness, so you can heal with me by your side",
+  "But we cannot simply sit and stare at our wounds forever",
+  "I want to get stack in your teeth so that a part of me will always be with you",
+  "The best reward is her expression of joy, for her laughter inspires god's choir to sing, and yet they know they don't hold a candle to her harmonious symphony",
+  "And when she grinned at me I'd finally felt the spring come to wash away the eternal winters of this earth we walk for no sun nor star could ever dream to shine as brilliantly as she",
+  "And after god created you, he took a chunk of the universe and put it in your eyes, just to underline the beauty of your face",
 ];
 
 export const getCustumeCompliment = (): string => {
