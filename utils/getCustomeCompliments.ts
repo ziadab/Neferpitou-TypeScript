@@ -152,6 +152,7 @@ export const compliments: string[] = [
   "The best reward is her expression of joy, for her laughter inspires god's choir to sing, and yet they know they don't hold a candle to her harmonious symphony",
   "And when she grinned at me I'd finally felt the spring come to wash away the eternal winters of this earth we walk for no sun nor star could ever dream to shine as brilliantly as she",
   "And after god created you, he took a chunk of the universe and put it in your eyes, just to underline the beauty of your face",
+  "I wonder how pretty watching the sunset through the reflection in your eyes would be",
 ];
 
 export const getCustumeCompliment = (): string => {
