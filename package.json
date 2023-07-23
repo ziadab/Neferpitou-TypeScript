@@ -7,8 +7,6 @@
     "dev": "tsnd --respawn --transpile-only -r tsconfig-paths/register -r  dotenv/config app.ts",
     "start": "ts-node  --transpile-only -r tsconfig-paths/register -r  dotenv/config app.ts",
     "start:prod": "node ./build/app.js",
-    "build": "tsc",
-    "postinstall": "yarn build",
     "generate": "graphql-code-generator --config codegen.ts"
   },
   "keywords": [],
@@ -30,7 +28,7 @@
     "get-graphql-schema": "^2.1.2",
     "google-spreadsheet": "^3.2.0",
     "graphql": "^16.7.1",
-    "graphql-request": "^3.7.0",
+    "graphql-request": "^6.1.0",
     "graphql-tag": "^2.12.6",
     "helmet": "^5.0.2",
     "libphonenumber-js": "^1.9.50",

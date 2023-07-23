@@ -8,6 +8,7 @@ import cronHandler from "./routes/cron";
 import typeformHandler from "./routes/typeform";
 import complimentHandler from "./routes/compliment";
 import updateHandler from "./routes/update";
+import vogueHandler from "./routes/vogue";
 import redisClient from "./services/redis";
 
 dotenv.config();
@@ -25,13 +26,13 @@ app.use("/telegram", telegramHandler);
 app.use("/cron", cronHandler);
 app.use("/typeform", typeformHandler);
 app.use("/compliment", complimentHandler);
+app.use("/vogue", vogueHandler);
 app.use("/update", updateHandler);
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, async () => {
-  await redisClient.connect();
+app.listen(port, () => {
   console.log(`Listening on ${port}...`);
 });
