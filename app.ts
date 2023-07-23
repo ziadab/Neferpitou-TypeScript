@@ -8,8 +8,13 @@ import cronHandler from "./routes/cron";
 import typeformHandler from "./routes/typeform";
 import complimentHandler from "./routes/compliment";
 import updateHandler from "./routes/update";
+import redisClient from "./services/redis";
 
 dotenv.config();
+
+redisClient.on("connect", () => {
+  console.log("Redis connected");
+});
 
 const app = express();
 app.use(express.json());
@@ -26,6 +31,7 @@ app.get("/health", (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+app.listen(port, async () => {
+  await redisClient.connect();
   console.log(`Listening on ${port}...`);
 });

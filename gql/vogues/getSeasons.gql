@@ -1,0 +1,7 @@
+query getSeasons {
+  allSeasons {
+    Season {
+      slug
+    }
+  }
+}

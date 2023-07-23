@@ -1,0 +1,34 @@
+query getFashionShowCollection($slug: String!) {
+  fashionShowV2(slug: "$slug") {
+    title
+    galleries {
+      collection {
+        ...GalleryFragment
+      }
+    }
+  }
+}
+
+fragment GalleryFragment on FashionShowGallery {
+  title
+  slidesV2 {
+    ... on GallerySlidesConnection {
+      slide {
+        ... on Slide {
+          photosTout {
+            ...imageFields
+          }
+        }
+        ... on CollectionSlide {
+          photosTout {
+            ...imageFields
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment imageFields on Image {
+  url
+}
