@@ -5,27 +5,15 @@ query getSeasonShows($season: String!) {
     filter: { season: { slug: $season } }
   ) {
     Content {
-      id
-      url
       title
       slug
       ... on FashionShowV2 {
-        instantShow
-        brand {
-          name
-        }
         photosTout {
           ... on Image {
             url
           }
         }
       }
-    }
-    pageInfo {
-      hasNextPage
-      hasPreviousPage
-      startCursor
-      endCursor
     }
   }
 }
