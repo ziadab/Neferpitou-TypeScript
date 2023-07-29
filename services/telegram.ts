@@ -4,6 +4,18 @@ class TelegramService {
   static sendMsgUrl: string = `${process.env.TELEGRAM_LINK}/sendMessage`;
   static forwardMessageUrl: string = `${process.env.TELEGRAM_LINK}/forwardMessage`;
   static sendNotification: string = `${process.env.NOTIFY_LINK}/sendMessage`;
+  static sendMediaGroup: string = `${process.env.TELEGRAM_LINK}/sendMediaGroup`;
+
+  static async sendMediaGroupNotify(media: any[], chat_id: number) {
+    return await axios
+      .post(this.sendMediaGroup, {
+        chat_id,
+        media,
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   static async sendNotify(text: string) {
     return await axios

@@ -1,5 +1,5 @@
 query getFashionShowCollection($slug: String!) {
-  fashionShowV2(slug: "$slug") {
+  fashionShowV2(slug: $slug) {
     title
     galleries {
       collection {

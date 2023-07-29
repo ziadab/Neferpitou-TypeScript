@@ -3407,7 +3407,7 @@ export type GetSeasonsQuery = {
   __typename?: "Root";
   allSeasons?: {
     __typename?: "AllSeasonConnection";
-    Season?: { __typename?: "Season"; slug: string };
+    Season?: Array<{ __typename?: "Season"; slug: string }>;
   };
 };
 
